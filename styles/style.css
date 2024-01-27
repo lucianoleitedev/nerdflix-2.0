@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.cdnfonts.com/css/circular-std');
+
+body {
+    margin: 2em;
+    font-family: 'Circular Std', sans-serif;
+    background-color: #00081d;
+}
+
+#logo {
+    width: 150px;
+}
+
+#container {
+    background-image: linear-gradient(103.24deg, rgba(0, 8, 29, 0.9) 23.83%, rgba(0, 8, 29, 0.3) 96.1%),
+        url(https://i0.wp.com/assets.b9.com.br/wp-content/uploads/2016/10/netflix-catalogo.jpg?resize=1060%2C596&ssl=1);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+select {
+    padding: 4px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.712);
+    margin-right: 10px;
+}
+
+#btn-enter {
+    padding: 7px 15px;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+#main {
+    color: white;
+    margin-top: 50px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#title-main {
+    font-size: 62px;
+    font-weight: 900;
+    transition: font-size 0.5s;
+    
+   
+}
+
+h3 {
+    font-weight: 400;
+    margin-top: 40px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#input {
+    height: 50px;
+    width: 80%;
+    max-width: 350px;
+    background-color: rgba(29, 29, 29, 0.488);
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+}
+
+#btn-start {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: white;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+}
+
+#box-container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    background: linear-gradient(333.52deg, #000235 24.58%, #010F42 84.55%, #E40913 104.96%);
+    border-radius: 5px;
+}
+
+.box-info {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    padding: 40px;
+    justify-content: center;
+}
+
+.box-title {
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    transition: font-size 0.5s;
+}
+
+.subtitle-main {
+    font-size: 20px;
+    display: flex;
+    transition: font-size 0.5s;
+}
+
+#tv {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    transition: max-width 0.5s, margin-bottom 0.5s;
+}
+
+#tablet {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    transition: max-width 0.5s, margin-bottom 0.5s;
+}
+
+.shadow {
+    width: 85%;
+    height: 7px;
+    background-color: rgba(0, 0, 0, 0.467);
+    margin: 0 auto;
+}
+
+/* Media query para ajustar o layout em telas menores */
+@media screen and (max-width: 960px) {
+    .box-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #title-main {
+        font-size: 32px;
+    }
+
+    .box-title {
+        font-size: 32px;
+    }
+
+    .subtitle-main {
+        font-size: 16px;
+    }
+
+    #tv,
+    #tablet {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Menu Responsivo */
+#main-menu {
+    display: flex;
+    align-items: center;
+}
+
+#main-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+#main-menu li {
+    margin: 0 15px;
+}
+
+#main-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#main-menu a:hover {
+    color: #e50914;
+}
+
+#menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos para telas pequenas */
+@media screen and (max-width: 768px) {
+    #main-menu ul {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+/* Adicione no final do seu arquivo CSS */
+
+/* Estilos para Seções de Filmes, Séries, Animes e Lançamentos */
+.movie-section,
+.series-section,
+.anime-section,
+.release-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.movie-list,
+.series-list,
+.anime-list,
+.release-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.movie-card,
+.series-card,
+.anime-card,
+.release-card {
+    margin: 15px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.movie-card:hover,
+.series-card:hover,
+.anime-card:hover,
+.release-card:hover {
+    transform: scale(1.1);
+}
+
+.movie-card img,
+.series-card img,
+.anime-card img,
+.release-card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.movie-card h3,
+.series-card h3,
+.anime-card h3,
+.release-card h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Media query para ajustar o layout em telas menores */
+@media screen and (max-width: 768px) {
+    .movie-card,
+    .series-card,
+    .anime-card,
+    .release-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
